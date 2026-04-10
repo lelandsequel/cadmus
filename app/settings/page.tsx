@@ -15,7 +15,7 @@ export default function SettingsPage() {
   useEffect(() => {
     async function load() {
       const { data: { user } } = await supabase.auth.getUser();
-      if (!user) { setLoading(false); return; }
+      if (!user) { return; }
 
       setUserEmail(user.email || '');
 
