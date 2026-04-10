@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LandingPage() {
   return (
@@ -6,7 +7,10 @@ export default function LandingPage() {
       {/* TopNav */}
       <nav className="flex justify-between items-center px-8 w-full sticky top-0 z-50 h-16 bg-surface-container-low shadow-sm">
         <div className="flex items-center gap-8">
-          <span className="text-xl font-bold tracking-tighter text-on-surface">CADMUS</span>
+          <div className="flex items-center gap-2">
+            <Image src="/cadmus-logo.jpg" alt="CADMUS" width={28} height={28} className="rounded-lg object-contain" />
+            <span className="text-xl font-bold tracking-tighter text-on-surface">CADMUS</span>
+          </div>
           <div className="hidden md:flex gap-6 items-center">
             <Link href="/dashboard" className="text-primary border-b-2 border-primary pb-1 text-sm font-medium">
               Dashboard
@@ -208,6 +212,26 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-surface-high bg-[#f0ede8] py-8 px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <Image src="/cadmus-logo.jpg" alt="CADMUS" width={28} height={28} className="rounded-lg object-contain" />
+            <span className="font-bold text-on-surface text-sm">CADMUS</span>
+            <span className="text-on-surface-variant/40 text-sm">—</span>
+            <span className="text-on-surface-variant text-sm">Your idea is not a spec.</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <a href="https://jourdanlabs.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
+              <Image src="/jourdanlabs-logo.jpg" alt="JourdanLabs" width={20} height={20} className="rounded object-contain opacity-60 group-hover:opacity-100 transition-opacity" />
+              <span className="text-xs text-on-surface-variant group-hover:text-on-surface transition-colors font-medium">JourdanLabs</span>
+            </a>
+            <span className="text-on-surface-variant/30 text-xs">·</span>
+            <span className="text-xs text-on-surface-variant/60">Powered by COSMIC</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
