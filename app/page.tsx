@@ -214,21 +214,45 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-surface-high bg-[#f0ede8] py-8 px-8">
+      <footer className="border-t border-surface-high bg-[#f0ede8] py-6 px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Left: CADMUS brand */}
           <div className="flex items-center gap-3">
-            <Image src="/cadmus-logo.jpg" alt="CADMUS" width={28} height={28} className="rounded-lg object-contain" />
-            <span className="font-bold text-on-surface text-sm">CADMUS</span>
-            <span className="text-on-surface-variant/40 text-sm">—</span>
+            <Image
+              src="/cadmus-logo.jpg"
+              alt="CADMUS"
+              width={48}
+              height={48}
+              className="object-contain mix-blend-multiply"
+            />
+            <span className="font-bold text-on-surface">CADMUS</span>
+            <span className="text-on-surface-variant/40">—</span>
             <span className="text-on-surface-variant text-sm">Your idea is not a spec.</span>
           </div>
-          <div className="flex items-center gap-2">
+
+          {/* Right: JourdanLabs + Powered by COSMIC */}
+          <div className="flex items-center gap-4">
             <a href="https://jourdanlabs.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
-              <Image src="/jourdanlabs-logo.jpg" alt="JourdanLabs" width={20} height={20} className="rounded object-contain opacity-60 group-hover:opacity-100 transition-opacity" />
-              <span className="text-xs text-on-surface-variant group-hover:text-on-surface transition-colors font-medium">JourdanLabs</span>
+              <Image
+                src="/jourdanlabs-logo.jpg"
+                alt="JourdanLabs"
+                width={40}
+                height={40}
+                className="object-contain mix-blend-multiply group-hover:opacity-80 transition-opacity"
+              />
+              <span className="text-sm font-semibold text-on-surface-variant group-hover:text-on-surface transition-colors">JourdanLabs</span>
             </a>
-            <span className="text-on-surface-variant/30 text-xs">·</span>
-            <span className="text-xs text-on-surface-variant/60">Powered by COSMIC</span>
+            <span className="text-on-surface-variant/30 text-sm">·</span>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-on-surface-variant/70">Powered by</span>
+              <Image
+                src="/cosmic-logo.jpg"
+                alt="COSMIC"
+                width={40}
+                height={40}
+                className="object-contain mix-blend-multiply"
+              />
+            </div>
           </div>
         </div>
       </footer>

@@ -26,7 +26,7 @@ export default function Sidebar() {
     <aside className="h-screen w-64 bg-surface-container-low flex flex-col py-6 border-r border-surface-high">
       <div className="px-6 mb-8">
         <div className="flex items-center gap-3">
-          <Image src="/cadmus-logo.jpg" alt="CADMUS" width={40} height={40} className="rounded-xl object-contain" />
+          <Image src="/cadmus-logo.jpg" alt="CADMUS" width={48} height={48} className="object-contain mix-blend-multiply" />
           <div>
             <p className="font-bold text-sm text-on-surface tracking-tight">CADMUS</p>
             <p className="text-[10px] text-on-surface-variant">by JourdanLabs</p>
@@ -60,7 +60,7 @@ export default function Sidebar() {
 
       <div className="px-6 pt-4 border-t border-surface-high">
         <a href="https://jourdanlabs.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
-          <Image src="/jourdanlabs-logo.jpg" alt="JourdanLabs" width={24} height={24} className="rounded object-contain opacity-70 group-hover:opacity-100 transition-opacity" />
+          <Image src="/jourdanlabs-logo.jpg" alt="JourdanLabs" width={32} height={32} className="object-contain mix-blend-multiply opacity-70 group-hover:opacity-100 transition-opacity" />
           <div>
             <p className="text-[10px] font-bold text-on-surface-variant group-hover:text-on-surface transition-colors">JourdanLabs</p>
             <p className="text-[9px] text-on-surface-variant/50">Powered by COSMIC</p>
